@@ -18,6 +18,7 @@ package com.github.moduth.blockcanary;
 import android.content.Context;
 
 import com.github.moduth.blockcanary.internal.BlockInfo;
+import com.tencent.wstt.gt.controller.GTRController;
 
 import java.io.File;
 import java.util.LinkedList;
@@ -35,7 +36,8 @@ public class BlockCanaryContext implements BlockInterceptor {
     }
 
     static void init(Context context, BlockCanaryContext blockCanaryContext) {
-        sApplicationContext = context;
+        sApplicationContext = context.getApplicationContext();
+        GTRController.init(sApplicationContext);
         sInstance = blockCanaryContext;
     }
 
