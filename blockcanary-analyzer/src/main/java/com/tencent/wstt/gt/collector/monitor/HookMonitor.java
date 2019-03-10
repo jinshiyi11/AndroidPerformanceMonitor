@@ -21,26 +21,26 @@ public class HookMonitor extends AbsMonitor {
     private static void startJava_YAHFAHook() {
         Class<?> hookClazz;
         try {
-            hookClazz = Class.forName("com.tencent.wstt.gt.collector.monitor.yhook.ActivityHookList");
-            HookMain.doHookDefault(hookClazz);
-            hookClazz = Class.forName("com.tencent.wstt.gt.collector.monitor.yhook.DBHookList");
-            HookMain.doHookDefault(hookClazz);
-            hookClazz = Class.forName("com.tencent.wstt.gt.collector.monitor.yhook.FragmentHookList");
-            HookMain.doHookDefault(hookClazz);
-            hookClazz = Class.forName("com.tencent.wstt.gt.collector.monitor.yhook.FragmentHookList_v4");
-            HookMain.doHookDefault(hookClazz);
-            hookClazz = Class.forName("com.tencent.wstt.gt.collector.monitor.yhook.OperationHookList");
-            HookMain.doHookDefault(hookClazz);
+//            hookClazz = Class.forName("com.tencent.wstt.gt.collector.monitor.yhook.ActivityHookList");
+//            HookMain.doHookDefault(hookClazz);
+//            hookClazz = Class.forName("com.tencent.wstt.gt.collector.monitor.yhook.DBHookList");
+//            HookMain.doHookDefault(hookClazz);
+//            hookClazz = Class.forName("com.tencent.wstt.gt.collector.monitor.yhook.FragmentHookList");
+//            HookMain.doHookDefault(hookClazz);
+//            hookClazz = Class.forName("com.tencent.wstt.gt.collector.monitor.yhook.FragmentHookList_v4");
+//            HookMain.doHookDefault(hookClazz);
+//            hookClazz = Class.forName("com.tencent.wstt.gt.collector.monitor.yhook.OperationHookList");
+//            HookMain.doHookDefault(hookClazz);
             hookClazz = Class.forName("com.tencent.wstt.gt.collector.monitor.yhook.ViewBuildHookList");
             HookMain.doHookDefault(hookClazz);
-
-            if (WhiteList.isYunOS()) {
-                hookClazz = Class.forName("com.tencent.wstt.gt.collector.monitor.yhook.ViewDrawHookWhiteList");
-            } else {
-                hookClazz = Class.forName("com.tencent.wstt.gt.collector.monitor.yhook.ViewDrawHookList");
-            }
-
-            HookMain.doHookDefault(hookClazz);
+//
+//            if (WhiteList.isYunOS()) {
+//                hookClazz = Class.forName("com.tencent.wstt.gt.collector.monitor.yhook.ViewDrawHookWhiteList");
+//            } else {
+//                hookClazz = Class.forName("com.tencent.wstt.gt.collector.monitor.yhook.ViewDrawHookList");
+//            }
+//
+//            HookMain.doHookDefault(hookClazz);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
